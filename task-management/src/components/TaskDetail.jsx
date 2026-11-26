@@ -1,11 +1,11 @@
-import { Link, useParams } from "react-router";
+import { Link, useParams } from "react-router-dom";
 import tasks from "./tasks.json"
 
 export default function TaskDetail () {
     const { id } = useParams();
 
     const task = tasks.find(
-        (task) => task.id === Number(id)
+        (task) => task.id === parseInt(id)
     );
 
     return (
